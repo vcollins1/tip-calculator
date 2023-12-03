@@ -8,6 +8,7 @@
   --bluegray: #e6f7fa;
   --input-title: #5E7A7D;
   --bluegraydark: #7F9D9F;
+  --hover: #9FE8DF;
 }
 
 * {
@@ -126,10 +127,6 @@ input::-webkit-inner-spin-button {
 }
 
 .tip--custom {
-  background: none;
-}
-
-.tip--custom input {
   width: 146px;
   height: 48px;
   border: none;
@@ -190,4 +187,91 @@ input::-webkit-inner-spin-button {
   font-size: 32px;
   font-weight: bold;
   color: var(--green);
+}
+
+@media screen and (min-width: 1440px) {
+  #container {
+    width: 1440px;
+  }
+
+  .calculator {
+    width: 920px;
+    height: 481px;
+    border-radius: 25px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+
+  .input {
+    width: 379px;
+  }
+
+  .input--tips {
+    height: 152px;
+    margin: 40px 0;
+  }
+
+  .tip:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .tip, .tip--custom input {
+    width: 117px;
+    cursor: pointer;
+  }
+
+  .tip--custom {
+    border: none;
+    background: var(--bluegray);
+  }
+
+  .tip:not(.tip--active, .tip--custom):hover {
+    background: var(--hover);
+    color: var(--darkgreen);
+  }
+
+  .tip--custom:focus,
+  .tip--custom:hover,
+  .input:hover .input__field,
+  .input:focus-within .input__field {
+    outline: 1px solid var(--green);
+    color: var(--darkgreen);
+  }
+
+  .input,
+  .input input {
+    cursor: pointer;
+  }
+
+  .tip:nth-child(2),
+  .tip:nth-child(5) {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .calculator__inputs {
+    width: 379px;
+    height: 388px;
+    margin: 0;
+  }
+
+  .results {
+    width: 413px;
+    height: 417px;
+    padding: 0 40px;
+    margin: 0;
+  }
+
+  .reset {
+    width: 333px;
+    margin: 180px auto 40px;
+    cursor: pointer;
+  }
+
+  .reset:hover {
+    background: var(--hover);
+  }
 }

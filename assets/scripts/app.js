@@ -16,7 +16,7 @@ form.addEventListener("submit", e => {
     const bill = document.querySelector("#bill").value == '' ? 0 : parseFloat(document.querySelector("#bill").value);
 
         let percentage;
-    if (document.querySelector(".tip--active").classList.contains("tip--input")) {
+    if (document.querySelector(".tip--active").classList.contains("tip--custom")) {
         percentage = parseFloat(document.querySelector(".tip--active").value);
         console.log("perPerson")
     } else {

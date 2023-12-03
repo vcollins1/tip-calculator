@@ -1,0 +1,172 @@
+:root {
+  --darkgreen: #00474B;
+  --lightgreen: #C5E4E7;
+  --green: #26C2AE;
+  --white: #FFF;
+  --bluegray: #e6f7fa;
+  --input-title: #5E7A7D;
+  --bluegraydark: #7F9D9F;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--lightgreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 375px;
+}
+
+#header {
+  text-align: center;
+  margin: 50px 0 41px;
+}
+
+.calculator {
+  height: 789px;
+  background: var(--white);
+  border-radius: 25px 25px 0 0;
+  padding: 32px 0;
+}
+
+.input__text {
+  color: var(--input-title);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.input {
+  display: block;
+  width: 311px;
+  margin: 0 auto;
+}
+
+.input__field {
+  background: var(--bluegray);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 6px 18px;
+  height: 48px;
+}
+
+.input__field input {
+  width: 107px;
+  text-align: right;
+  border: none;
+  background-color: var(--bluegray);
+  color: var(--darkgreen);
+  font-size: 24px;
+  font-weight: bold;
+  flex: 1;
+}
+
+.input__field input::placeholder {
+  color: var(--darkgreen);
+}
+
+.input__field input:focus {
+  outline: none;
+}
+
+.input__field input::-webkit-outer-spin-button,
+.input__field input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+#tips {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input--tips {
+  height: 216px;
+  margin: 32px auto;
+}
+
+.input--tips .input__text {
+  margin-bottom: 16px;
+}
+
+.tip {
+  width: 146px;
+  height: 48px;
+  background: var(--darkgreen);
+  color: var(--white);
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.tip:nth-child(odd) {
+  margin-right: 16px;
+}
+
+.tip--custom {
+  background: var(--bluegray);
+  color: var(--input-title);
+}
+
+.results {
+  width: 327px;
+  height: 257px;
+  background: var(--darkgreen);
+  border-radius: 15px;
+  margin: 32px auto 0;
+  padding: 0 22px 0;
+  overflow: auto;
+}
+
+.reset {
+  width: 281px;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  background: var(--green);
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--darkgreen);
+  margin: 32px auto 24px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.text > div {
+  font-size: 13px;
+  color: var(--bluegraydark);
+}
+
+.result--tip {
+  margin-bottom: 20px;
+  margin-top: 37px;
+}
+
+.money {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--green);
+}

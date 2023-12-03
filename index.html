@@ -4,8 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tip Calculator</title>
+  <link rel="stylesheet" href="./assets/css/app.css">
 </head>
 <body>
-  
+  <div id="container">
+    <header id="header">
+      <img src="./assets/images/logo.svg" alt="">
+    </header>
+
+    <div class="calculator">
+      <form class="calculator__inputs">
+        <label for="bill" class="input input--bill">
+          <div class="input__text">Bill</div>
+          <div class="input__field">
+            <img src="./assets/images/icon-dollar.svg" alt="Dollar Sign">
+            <input type="number" id="bill" placeholder="0">
+          </div>
+        </label>
+
+        <div class="input input--tips">
+          <div class="input__text">Select Tip %</div>
+          <div id="tips">
+            <div class="tip">5%</div>
+            <div class="tip">10%</div>
+            <div class="tip">15%</div>
+            <div class="tip">25%</div>
+            <div class="tip">50%</div>
+            <div class="tip tip--custom">Custom</div>
+          </div>
+        </div>
+
+        <label for="people" class="input">
+          <div class="input__text">Number of People</div>
+          <div class="input__field">
+            <img src="./assets/images/icon-person.svg" alt="Dollar Sign">
+            <input type="number" id="people" placeholder="0">
+          </div>
+        </label>
+
+        <input type="submit" hidden>
+      </form>
+
+      <section class="results">
+        <div class="result result--tip">
+          <div class="text">
+            Tip Amount
+            <div>/ person</div>
+          </div>
+          <div class="money">$0.00</div>
+        </div>
+
+        <div class="result result--total">
+          <div class="text">
+            Total
+            <div>/ person</div>
+          </div>
+          <div class="money">$0.00</div>
+        </div>
+
+        <button class="reset">Reset</button>
+      </section>
+    </div>
+  </div>
 </body>
 </html>

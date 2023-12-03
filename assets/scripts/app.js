@@ -14,7 +14,18 @@ tips.addEventListener("click", e => {
 
 form.addEventListener("submit", e => {
     e.preventDefault();
+
     const bill = document.querySelector("#bill").value == '' ? 0 : parseFloat(document.querySelector("#bill").value);
+    const people = document.querySelector("#people").value == '' ? 0 : parseFloat(document.querySelector("#people").value);
+
+    if (people <= 0) {
+        document.querySelector(".has-error + .input__field").classList.add("error-border");
+        document.querySelector(".error-border").classList.add("error-border");
+        document.querySelector(".has-error span").classList.remove("error-msg")
+        return;
+    } else {
+        console.log("greater")
+    }
 
         let percentage;
     if (document.querySelector(".tip--active").classList.contains("tip--custom")) {
@@ -23,10 +34,6 @@ form.addEventListener("submit", e => {
     } else {
         percentage = parseFloat(document.querySelector(".tip--active").innerText.replace('%', ''));
     }
-
-
-
-    const people = document.querySelector("#people").value == '' ? 0 : parseFloat(document.querySelector("#people").value);
 
     const eachTip = (bill * (percentage / 100) / people).toFixed(2);
     const billSplit = parseFloat(bill / people).toFixed(2);

@@ -9,6 +9,7 @@
   --input-title: #5E7A7D;
   --bluegraydark: #7F9D9F;
   --hover: #9FE8DF;
+  --error: #EB2428;
 }
 
 * {
@@ -87,6 +88,24 @@ body {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   appearance: none;
+}
+
+.has-error {
+  display: flex;
+  justify-content: space-between;
+}
+
+.has-error span {
+  color: var(--error);
+}
+
+.error-msg {
+  visibility: hidden;
+}
+
+.error-border {
+  border: 1px solid var(--error);
+  outline: none;
 }
 
 #tips {

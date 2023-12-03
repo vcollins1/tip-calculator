@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tip Calculator</title>
   <link rel="stylesheet" href="./assets/css/app.css">
+  <script src="./assets/scripts/app.js" defer></script>
 </head>
 <body>
   <div id="container">
@@ -18,7 +19,7 @@
           <div class="input__text">Bill</div>
           <div class="input__field">
             <img src="./assets/images/icon-dollar.svg" alt="Dollar Sign">
-            <input type="number" id="bill" placeholder="0">
+            <input type="number" id="bill" placeholder="0" step="0.01">
           </div>
         </label>
 
@@ -30,11 +31,11 @@
             <div class="tip tip--active">15%</div>
             <div class="tip">25%</div>
             <div class="tip">50%</div>
-            <div class="tip tip--custom">Custom</div>
+            <div class="tip tip--custom"><input class="tip tip--input" type="number" placeholder="Custom"></div>
           </div>
         </div>
 
-        <label for="people" class="input">
+        <label for="people" class="input input--people">
           <div class="input__text">Number of People</div>
           <div class="input__field">
             <img src="./assets/images/icon-person.svg" alt="Dollar Sign">
@@ -51,7 +52,7 @@
             Tip Amount
             <div>/ person</div>
           </div>
-          <div class="money">$0.00</div>
+          <div class="money money--tip">$0.00</div>
         </div>
 
         <div class="result result--total">
@@ -59,7 +60,7 @@
             Total
             <div>/ person</div>
           </div>
-          <div class="money">$0.00</div>
+          <div class="money money--total">$0.00</div>
         </div>
 
         <button class="reset">Reset</button>

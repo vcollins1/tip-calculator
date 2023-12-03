@@ -3,6 +3,7 @@ const form = document.querySelector(".calculator__inputs");
 const tips = document.querySelector("#tips");
 const tipAmount = document.querySelector(".money--tip");
 const total = document.querySelector(".money--total");
+const reset = document.querySelector(".reset");
 
 tips.addEventListener("click", e => {
     if (e.target.classList.contains("tip")) {
@@ -34,3 +35,8 @@ form.addEventListener("submit", e => {
     tipAmount.innerHTML = eachTip;
     total.innerHTML = perPerson;
 });
+
+reset.addEventListener("click", e => {
+    tipAmount.innerHTML = "$0.00";
+    total.innerHTML = "$0.00"
+})
